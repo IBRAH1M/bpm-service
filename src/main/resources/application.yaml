@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Management System - BPM Service
+  datasource:
+    url: jdbc:h2:mem:camundadb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+    driverClassName: org.h2.Driver
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+security:
+  oauth2:
+    client:
+      clientId: R2dpxQ3vPrtfgF72
+      clientSecret: fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9
+      accessTokenUri: http://localhost:9090/api/oauth/toekn
+      userAuthorizationUri: http://localhost:9090/api/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:9090/api/oauth/me
+
